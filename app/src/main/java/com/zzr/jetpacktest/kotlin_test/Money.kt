@@ -1,4 +1,4 @@
-package com.zzr.jetpacktest
+package com.zzr.jetpacktest.kotlin_test
 
 class Money(val value: Int) {
 

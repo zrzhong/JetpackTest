@@ -1,4 +1,4 @@
-package com.zzr.jetpacktest
+package com.zzr.jetpacktest.kotlin_test
 
 fun String.lettersCount(): Int {
     var count = 0

@@ -1,4 +1,4 @@
-package com.zzr.jetpacktest
+package com.zzr.jetpacktest.kotlin_test
 
 infix fun String.beginWith(prefix: String) = startsWith(prefix)
 

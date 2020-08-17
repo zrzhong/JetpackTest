@@ -1,4 +1,4 @@
-package com.zzr.jetpacktest
+package com.zzr.jetpacktest.kotlin_test
 
 import kotlin.reflect.KProperty
 
