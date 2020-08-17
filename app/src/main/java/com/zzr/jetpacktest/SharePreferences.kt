@@ -1,0 +1,10 @@
+package com.zzr.jetpacktest
+
+import android.content.SharedPreferences
+
+//拓展函数 函数参数类型
+fun SharedPreferences.open(block: SharedPreferences.Editor.() -> Unit): Unit {
+    val editor = edit()
+    editor.block()
+    editor.apply()
+}
