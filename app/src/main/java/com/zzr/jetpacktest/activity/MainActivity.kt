@@ -5,15 +5,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.work.OneTimeWorkRequest
 import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
 import com.zzr.jetpacktest.R
 import com.zzr.jetpacktest.bean.User
-import com.zzr.jetpacktest.open
+import com.zzr.jetpacktest.kotlin_test.open
+import com.zzr.jetpacktest.kotlin_test.showToast
 import com.zzr.jetpacktest.repository.AppDatabase
-import com.zzr.jetpacktest.showToast
 import com.zzr.jetpacktest.viewmodel.MainViewModel
 import com.zzr.jetpacktest.viewmodel.MainViewModelFactory
 import com.zzr.jetpacktest.workmanager.SimpleWorker
@@ -38,9 +39,7 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(this, "点击了", Toast.LENGTH_SHORT).show()
             "点击了".showToast(this)
             R.string.app_name.showToast(this)
-            com.zzr.jetpacktest.startActivity<TestActivity>(
-                this
-            ) {
+            com.zzr.jetpacktest.kotlin_test.startActivity<TestActivity>(this){
                 putExtra("param1", "hello")
                 putExtra("param2", "kotlin")
             }
