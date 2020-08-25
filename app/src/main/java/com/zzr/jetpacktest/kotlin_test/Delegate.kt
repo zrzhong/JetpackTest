@@ -3,7 +3,7 @@ package com.zzr.jetpacktest.kotlin_test
 import kotlin.reflect.KProperty
 
 class Delegate {
-    var proValue: Any? = null
+    private var proValue: Any? = null
 
     operator fun getValue(myClass: MyClass, prop: KProperty<*>): Any? {
         return proValue

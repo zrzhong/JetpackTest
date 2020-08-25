@@ -15,6 +15,7 @@ import com.zzr.jetpacktest.bean.User
 import com.zzr.jetpacktest.kotlin_test.open
 import com.zzr.jetpacktest.kotlin_test.showToast
 import com.zzr.jetpacktest.repository.AppDatabase
+import com.zzr.jetpacktest.sputils.SpBase
 import com.zzr.jetpacktest.viewmodel.MainViewModel
 import com.zzr.jetpacktest.viewmodel.MainViewModelFactory
 import com.zzr.jetpacktest.workmanager.SimpleWorker
@@ -35,14 +36,19 @@ class MainActivity : AppCompatActivity() {
             ViewModelProvider(this, MainViewModelFactory(counter)).get(MainViewModel::class.java)
 
         tv_msg.text = "我是消息内容"
+
+        tv_msg.text = SpBase.contentSomething
+
         tv_msg.setOnClickListener {
 //            Toast.makeText(this, "点击了", Toast.LENGTH_SHORT).show()
             "点击了".showToast(this)
             R.string.app_name.showToast(this)
-            com.zzr.jetpacktest.kotlin_test.startActivity<TestActivity>(this){
+            com.zzr.jetpacktest.kotlin_test.startActivity<TestActivity>(this) {
                 putExtra("param1", "hello")
                 putExtra("param2", "kotlin")
             }
+
+            SpBase.contentSomething = "hello world"
         }
         getSharedPreferences("data", Context.MODE_PRIVATE).open {
             putString("name", "Tome")

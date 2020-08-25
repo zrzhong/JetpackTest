@@ -1,5 +1,5 @@
 package com.zzr.jetpacktest.kotlin_test
 
 class MyClass {
-    var p by Delegate()
+    var p by MyDelegate()
 }
