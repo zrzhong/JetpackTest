@@ -3,8 +3,8 @@ package com.zzr.jetpacktest.ui.place
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.zzr.jetpacktest.logic.Repository
-import com.zzr.jetpacktest.logic.model.Place
+import com.zzr.jetpacktest.module_logic.Repository
+import com.zzr.jetpacktest.module_logic.model.Place
 
 class PlaceViewModel : ViewModel() {
 

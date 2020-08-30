@@ -1,13 +1,23 @@
 package com.zzr.jetpacktest.viewmodel
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.ViewModel
+import android.util.Log
+import androidx.lifecycle.*
 import com.zzr.jetpacktest.bean.User
 import com.zzr.jetpacktest.repository.Repository
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.launch
 
 class MainViewModel(countReserved: Int) : ViewModel() {
+
+    fun test(
+
+    ) {
+        viewModelScope.launch(CoroutineExceptionHandler { _, e ->
+            Log.i("TAG", "test: ${e.message}")
+        }) {
+
+        }
+    }
 
     private val userLiveData: MutableLiveData<User> = MutableLiveData()
     val userName: LiveData<String> = Transformations.map(userLiveData) {
@@ -21,6 +31,9 @@ class MainViewModel(countReserved: Int) : ViewModel() {
 
     fun getUser(userId: String) {
         userIdLiveData.value = userId
+        viewModelScope.launch {
+
+        }
     }
 
     val counter: LiveData<Int>

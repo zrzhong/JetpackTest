@@ -5,15 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.work.OneTimeWorkRequest
-import androidx.work.PeriodicWorkRequest
 import androidx.work.WorkManager
 import com.zzr.jetpacktest.R
 import com.zzr.jetpacktest.bean.User
+import com.zzr.jetpacktest.kotlin_test.gotoActivity
 import com.zzr.jetpacktest.kotlin_test.open
 import com.zzr.jetpacktest.kotlin_test.showToast
+import com.zzr.jetpacktest.module_logic.ui.ArticleActivity
 import com.zzr.jetpacktest.repository.AppDatabase
 import com.zzr.jetpacktest.sputils.SpBase
 import com.zzr.jetpacktest.viewmodel.MainViewModel
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 //            Toast.makeText(this, "点击了", Toast.LENGTH_SHORT).show()
             "点击了".showToast(this)
             R.string.app_name.showToast(this)
-            com.zzr.jetpacktest.kotlin_test.startActivity<TestActivity>(this) {
+            gotoActivity<TestActivity>(this) {
                 putExtra("param1", "hello")
                 putExtra("param2", "kotlin")
             }
@@ -93,7 +93,9 @@ class MainActivity : AppCompatActivity() {
 //            val request = PeriodicWorkRequest.Builder(SimpleWorker::class.java,15,TimeUnit.MINUTES).build()
             WorkManager.getInstance(this).enqueue(request)
         }
-
+        gotoArticle.setOnClickListener {
+            gotoActivity<ArticleActivity>(this)
+        }
     }
 
     companion object {

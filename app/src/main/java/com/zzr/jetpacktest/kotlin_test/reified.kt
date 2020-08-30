@@ -5,12 +5,12 @@ import android.content.Intent
 import com.zzr.jetpacktest.bean.Person
 import com.zzr.jetpacktest.bean.Student
 
-inline fun <reified T> startActivity(context: Context) {
+inline fun <reified T> gotoActivity(context: Context) {
     val intent = Intent(context, T::class.java)
     context.startActivity(intent)
 }
 
-inline fun <reified T> startActivity(context: Context, block: Intent.() -> Unit) {
+inline fun <reified T> gotoActivity(context: Context, block: Intent.() -> Unit) {
     val intent = Intent(context, T::class.java)
     intent.block()
     context.startActivity(intent)

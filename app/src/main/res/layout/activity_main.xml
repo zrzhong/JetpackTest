@@ -42,9 +42,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Query Data" />
+
     <Button
         android:id="@+id/doWorkBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Do Work" />
+
+    <Button
+        android:id="@+id/gotoArticle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gotoArticle" />
 </LinearLayout>
