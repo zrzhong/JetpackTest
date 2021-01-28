@@ -25,6 +25,8 @@ fun main() {
         append("Ate all fruits.")
     }
     println(result.toString())
+
+    val array = Array(3) { it->it.inc()}
 }
 
 inline fun num1AndNum2(num1: Int, num2: Int, operation: (Int, Int) -> Int): Int {

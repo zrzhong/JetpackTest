@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zzr.jetpacktest.widget.MyNestedScrollParent xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_f5"
+    tools:context=".activity.NestedScrollActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pic001" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="我是标题"
+        android:textSize="20sp" />
+
+    <com.zzr.jetpacktest.widget.MyNestedScrollChild
+        android:id="@+id/nestedchild"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我是任意内容我是任意内容我是任意内容我是任意内容我是任意内容我是任意内容我是任意内容我是任意内容我是任意内容我是任意内容"
+            android:textSize="30sp" />
+
+    </com.zzr.jetpacktest.widget.MyNestedScrollChild>
+
+</com.zzr.jetpacktest.widget.MyNestedScrollParent>

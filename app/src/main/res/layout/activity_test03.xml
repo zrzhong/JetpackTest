@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".activity.Test03Activity">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="MaterialButton"
+            android:theme="@style/MaterialComponents_Theme"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="16dp"
+            app:rippleColor="@color/color_red"
+            app:icon="@drawable/back"
+            app:iconGravity="end"
+            app:iconPadding="6dp"
+            app:iconSize="28dp"
+            app:iconTint="@color/colorAccent"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage2"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage3" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage4" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage5"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage6"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage7"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage8"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage9"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="4dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic002"
+            app:shapeAppearance="@style/StyleShapeAppearanceImage10"
+            app:strokeColor="@color/colorAccent"
+            app:strokeWidth="4dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -2,7 +2,7 @@ package com.zzr.jetpacktest.repository
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.zzr.jetpacktest.bean.User
+import com.zzr.jetpacktest.entity.User
 
 @Dao
 interface UserDao {

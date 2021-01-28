@@ -1,8 +1,7 @@
 package com.zzr.jetpacktest.kotlin_test;
 
-import com.zzr.jetpacktest.bean.Human;
-import com.zzr.jetpacktest.bean.Person;
-import com.zzr.jetpacktest.bean.Worker1;
+import com.zzr.jetpacktest.entity.Human;
+import com.zzr.jetpacktest.entity.Worker1;
 
 import java.util.ArrayList;
 import java.util.List;

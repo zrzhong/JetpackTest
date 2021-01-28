@@ -2,14 +2,16 @@ package com.zzr.jetpacktest.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.room.Room
+import android.util.Log
 import com.zzr.jetpacktest.R
-import com.zzr.jetpacktest.bean.User
-import com.zzr.jetpacktest.kotlin_test.later
-import com.zzr.jetpacktest.repository.AppDatabase
 import kotlinx.android.synthetic.main.activity_test.*
+import kotlinx.coroutines.*
 
-class TestActivity : AppCompatActivity() {
+class TestActivity : AppCompatActivity(), CoroutineScope by MainScope() {
+    companion object {
+        const val TAG = "TestActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test)
@@ -17,16 +19,26 @@ class TestActivity : AppCompatActivity() {
         val content = "value==${intent.getStringExtra("param1")},${intent.getStringExtra("param2")}"
         tv_content.text = content
 
-//        val db = Room.databaseBuilder(this.applicationContext, AppDatabase::class.java,
-//                "app_database")
-//                .build()
-        val p: User by later {
-            val user = User("jack", 10)
-            user
+        launch {
+            launchJob()
+            val deferred = asyncDeferred().await()
+            Log.i(TAG, "async开启协程的返回值$deferred")
         }
-        val user by lazy {
-            val user = User("Tom", 20)
-            user
+
+    }
+
+    private suspend fun launchJob() = coroutineScope {
+        launch {
+            Log.i(TAG, "launch 开启协程")
+            delay(100)
+            Log.i(TAG, "launch 开启协程结束")
         }
+    }
+
+    private suspend fun asyncDeferred() = async {
+        Log.i(TAG, "async 开启协程")
+        delay(100)
+        Log.i(TAG, "async 开启协程结束")
+        return@async "Result"
     }
 }

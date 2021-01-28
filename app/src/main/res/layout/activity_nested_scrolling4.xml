@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.NestedScrollingActivity4">
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/pic001" />
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_title_height"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我是标题" />
+    </RelativeLayout>
+
+    <com.zzr.jetpacktest.widget.StickyNavLayout
+        android:id="@+id/sick_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--透明TopView-->
+        <View
+            android:id="@+id/sl_top_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#fff"
+            app:tabIndicator="@color/colorPrimaryDark"
+            app:tabIndicatorHeight="3dp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpDemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.zzr.jetpacktest.widget.StickyNavLayout>
+
+</RelativeLayout>

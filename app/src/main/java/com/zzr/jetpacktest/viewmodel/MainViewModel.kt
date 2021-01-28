@@ -2,7 +2,7 @@ package com.zzr.jetpacktest.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.*
-import com.zzr.jetpacktest.bean.User
+import com.zzr.jetpacktest.entity.User
 import com.zzr.jetpacktest.repository.Repository
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch

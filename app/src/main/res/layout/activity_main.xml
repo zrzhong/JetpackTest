@@ -1,57 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activity.MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_msg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="28dp"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="space_around">
 
-    <Button
-        android:id="@+id/getUserBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get User" />
+        <Button
+            android:id="@+id/tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoTest01" />
 
-    <Button
-        android:id="@+id/addDataBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Data" />
+        <Button
+            android:id="@+id/gotoTest02Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoTest02" />
 
-    <Button
-        android:id="@+id/updateDataBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Update Data" />
+        <Button
+            android:id="@+id/getUserBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get User" />
 
-    <Button
-        android:id="@+id/deleteDataBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete Data" />
+        <Button
+            android:id="@+id/addDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Data" />
 
-    <Button
-        android:id="@+id/queryDataBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Query Data" />
+        <Button
+            android:id="@+id/updateDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Data" />
 
-    <Button
-        android:id="@+id/doWorkBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Do Work" />
+        <Button
+            android:id="@+id/deleteDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Data" />
 
-    <Button
-        android:id="@+id/gotoArticle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="gotoArticle" />
-</LinearLayout>
+        <Button
+            android:id="@+id/queryDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Query Data" />
+
+        <Button
+            android:id="@+id/doWorkBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do Work" />
+
+        <Button
+            android:id="@+id/gotoArticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoArticle" />
+
+        <Button
+            android:id="@+id/gotoMaterial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoMaterial"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/gotoConstraint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoConstraint" />
+
+        <Button
+            android:id="@+id/gotoItemDecoration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoItemDecoration" />
+
+        <Button
+            android:id="@+id/gotoDiff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoDiff" />
+
+        <Button
+            android:id="@+id/gotoWeb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoWeb" />
+
+        <Button
+            android:id="@+id/gotoWeb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotoWeb2" />
+
+        <Button
+            android:id="@+id/firstA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gotofirstA" />
+
+        <Button
+            android:id="@+id/watermark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="watermark" />
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="camera" />
+
+        <Button
+            android:id="@+id/Staggered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Staggered"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/flexBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="flexBox"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/nestedScroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nestedScroll"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/nestedScroll2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nestedScroll2"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/nestedScroll3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nestedScroll3"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/nestedScroll4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nestedScroll4"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/coordinator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="coordinator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/coordinator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="coordinator2"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/coroutineDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="coroutineDemo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/BottomSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BottomSheet"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/webReload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="webReload"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/serviceTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="serviceTest"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/fragmentTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fragmentTest"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/navigationDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="navigationDemo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/transitionTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="transitionTest"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/sceneTransition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sceneTransition"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/watermark2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="watermark2"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/netDemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="netDemo"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/navigationDemo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="navigationDemo2"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/layoutManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="layoutManager"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/permissionX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="permissionX"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/navigationDemo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="navigationDemo3"
+            android:textAllCaps="false" />
+
+    </com.google.android.flexbox.FlexboxLayout>
+</androidx.core.widget.NestedScrollView>
+
+

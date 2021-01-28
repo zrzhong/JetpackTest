@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_page_1">
+
+    <include app:graph="@navigation/include_graph" />
+
+    <include app:graph="@navigation/in_game_navigation" />
+
+    <fragment
+        android:id="@+id/fragment_page_1"
+        android:name="com.zzr.jetpacktest.navigation.Page1Fragment"
+        android:label="page1"
+        tools:layout="@layout/fragment_page1">
+        <action
+            android:id="@+id/action_fragment_page_1_to_fragment_page_2"
+            app:destination="@id/fragment_page_2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_fragment_page_1_to_include_graph"
+            app:destination="@id/second_graph"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_fragment_page_1_to_game_module"
+            app:destination="@id/in_game_nav_graph"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_page_2"
+        android:name="com.zzr.jetpacktest.navigation.Page2Fragment"
+        android:label="page2"
+        tools:layout="@layout/fragment_page2">
+        <action
+            android:id="@+id/action_fragment_page_2_to_fragment_page_3"
+            app:destination="@id/fragment_page_3"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_fragment_page_2_to_fragment_page_1"
+            app:destination="@id/fragment_page_1"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out" />
+        <argument
+            android:name="myString"
+            android:defaultValue="value"
+            app:argType="string" />
+        <argument
+            android:name="myInteger"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_page_3"
+        android:name="com.zzr.jetpacktest.navigation.Page3Fragment"
+        android:label="page3"
+        tools:layout="@layout/fragment_page3">
+        <action
+            android:id="@+id/action_fragment_page_3_to_fragment_page_2"
+            app:destination="@id/fragment_page_2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/slide_in"
+            app:popExitAnim="@anim/slide_out" />
+        <action
+            android:id="@+id/action_fragment_page_3_to_coordinatorDemo2Activity"
+            app:destination="@id/coordinatorDemo2Activity" />
+        <action
+            android:id="@+id/action_fragment_page_3_to_navigation"
+            app:destination="@id/navigation" />
+    </fragment>
+
+    <activity
+        android:id="@+id/coordinatorDemo2Activity"
+        android:name="com.zzr.jetpacktest.activity.CoordinatorDemo2Activity"
+        android:label="activity_coordinator_demo2"
+        tools:layout="@layout/activity_coordinator_demo2" />
+
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/nestedFragment1">
+        <fragment
+            android:id="@+id/nestedFragment1"
+            android:name="com.zzr.jetpacktest.navigation.NestedFragment1"
+            android:label="fragment_nested1"
+            tools:layout="@layout/fragment_nested1" />
+    </navigation>
+    <action
+        android:id="@+id/action_global_fragment_page_1"
+        app:destination="@id/fragment_page_1" />
+
+</navigation>

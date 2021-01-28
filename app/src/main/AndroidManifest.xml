@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.zzr.jetpacktest">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".MyApplication"
@@ -11,9 +17,53 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".module_logic.ui.ArticleActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activity.NavigationDemoActivity"
+            android:theme="@style/MaterialComponents_Theme">
+
+        </activity>
+        <activity android:name=".activity.PermissionXActivity" />
+        <activity android:name=".activity.LayoutManagerTestActivity" />
+        <activity android:name=".activity.NavigationDemoActivity2" />
+        <activity android:name=".activity.NetDemoActivity" />
+        <activity android:name=".activity.WatermarkActivity2" />
+        <activity android:name=".activity.transition.SceneActivity" />
+        <activity android:name=".activity.transition.TransitionBActivity" />
+        <activity android:name=".activity.transition.TransitionAActivity" />
+        <activity
+            android:name=".activity.NavigationActivity"
+            android:label="@string/title_activity_main2" />
+        <activity android:name=".activity.FragmentTestActivity" />
+        <activity android:name=".activity.ServiceActivity" />
+
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false" />
+
+        <activity android:name=".activity.WebTestActivity" />
+        <activity android:name=".activity.BottomSheetActivity" />
+        <activity android:name=".activity.CoroutineDemoActivity" />
+        <activity android:name=".activity.CoordinatorDemo2Activity" />
+        <activity android:name=".activity.CoordinatorDemoActivity" />
+        <activity android:name=".activity.NestedScrollingActivity4" />
+        <activity android:name=".activity.NestedScrollActivity3" />
+        <activity android:name=".activity.NestedScrollActivity" />
+        <activity android:name=".activity.FlexBoxActivity" />
+        <activity android:name=".activity.StaggeredActivity" />
+        <activity android:name=".activity.CameraActivity" />
+        <activity android:name=".activity.WatermarkActivity" />
+        <activity android:name=".activity.SecondActivity" />
+        <activity android:name=".activity.FirstActivity" />
+        <activity android:name=".activity.TestWebActivity2" />
+        <activity android:name=".activity.TestWebActivity" />
+        <activity android:name=".activity.Test06Activity" />
+        <activity android:name=".activity.Test05Activity" />
+        <activity android:name=".activity.Test04Activity" />
+        <activity android:name=".activity.Test03Activity" />
+        <activity android:name=".activity.Test02Activity" />
         <activity android:name=".activity.TestActivity" />
+        <activity android:name=".module_logic.ui.ArticleActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +71,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.NestedScrollActivity2" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="com.zzr.jetpacktest.startup.LibraryC"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>

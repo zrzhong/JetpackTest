@@ -2,8 +2,8 @@ package com.zzr.jetpacktest.kotlin_test
 
 import android.content.Context
 import android.content.Intent
-import com.zzr.jetpacktest.bean.Person
-import com.zzr.jetpacktest.bean.Student
+import com.zzr.jetpacktest.entity.Person
+import com.zzr.jetpacktest.entity.Student
 
 inline fun <reified T> gotoActivity(context: Context) {
     val intent = Intent(context, T::class.java)

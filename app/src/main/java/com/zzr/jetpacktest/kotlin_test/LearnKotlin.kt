@@ -1,6 +1,6 @@
 package com.zzr.jetpacktest.kotlin_test
 
-import com.zzr.jetpacktest.bean.Study
+import com.zzr.jetpacktest.entity.Study
 
 fun main() {
     /*println("Hello Kotlin!")

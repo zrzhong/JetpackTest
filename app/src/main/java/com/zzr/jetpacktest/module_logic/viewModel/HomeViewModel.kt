@@ -26,6 +26,15 @@ class HomeViewModel : ViewModel() {
 
     fun articleList(page: Int) {
 //        viewModelScope.launch {
+//            runCatching {
+//
+//            }.onSuccess {
+//
+//            }.onFailure {
+//
+//            }
+//        }
+//        viewModelScope.launch {
 //            val articleList = withContext(Dispatchers.IO) {
 //                ApiServiceManager.apiService.articleList(page)
 //            }
@@ -43,7 +52,7 @@ class HomeViewModel : ViewModel() {
             _articleData.value = withContext(Dispatchers.IO) {
                 ApiServiceManager.apiService.articleList(page)
 //                ApiServiceManager.apiService.articleList2(page).await()
-            }
+            }!!
             loadState.value = LoadState.Success()
         }, {
             loadState.value = LoadState.Fail(it.message ?: "获取数据失败")

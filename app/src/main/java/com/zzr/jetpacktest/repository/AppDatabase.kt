@@ -4,7 +4,8 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.zzr.jetpacktest.bean.User
+import com.zzr.jetpacktest.entity.Student
+import com.zzr.jetpacktest.entity.User
 
 @Database(version = 1, entities = [User::class])
 abstract class AppDatabase : RoomDatabase() {

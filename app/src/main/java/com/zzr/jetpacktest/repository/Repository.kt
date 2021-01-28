@@ -2,7 +2,7 @@ package com.zzr.jetpacktest.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.zzr.jetpacktest.bean.User
+import com.zzr.jetpacktest.entity.User
 
 object Repository {
 
